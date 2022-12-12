@@ -37,15 +37,24 @@ for(i = 0; i < picShadow.length; i++) {
         }
 }
 
+/* this is the gallery photo selector, which also removes opactiy from little photo on hover*/
 
 let littleImage = document.querySelectorAll(".gallery-pic");
 for(i = 0; i < littleImage.length; i++) {
     let selectedImage = littleImage[i];
         selectedImage.addEventListener("click", changeImage, false);
+        selectedImage.addEventListener("mouseover", addOpacity, false);
+        selectedImage.addEventListener("mouseout", removeOpacity, false);
         function changeImage() {
             console.log(selectedImage.src);
             newSource = selectedImage.src;
             document.querySelector("#expanded-image").src = newSource;
+        }
+        function addOpacity() {
+            selectedImage.setAttribute('id','gallery-hover');
+        }
+        function removeOpacity() {
+            selectedImage.removeAttribute('id','gallery-hover');
         }
 }
 

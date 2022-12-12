@@ -239,6 +239,34 @@ a {
 }
 
 .big-image {
+    display: flex;
+    justify-content: center;
     position: relative;
     width: 100%;
+    margin: 30px;
+}
+
+#expanded-image {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border: 5px solid #E5E7EB;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    margin: 30px bottom;
+    max-width: 1000px;
+    max-height: 1000px;
+}
+
+#gallery-hover {
+    opacity: 1;
+}
+
+#resume {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
 }
