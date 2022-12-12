@@ -20,5 +20,16 @@ for(i = 0; i < shadow.length; i++) {
         }
 }
 
-
+let picShadow = document.querySelectorAll(".cover-pic");
+for(i = 0; i < picShadow.length; i++) {
+    let shadowImage = picShadow[i];
+        shadowImage.addEventListener("mouseover", addShadow, false);
+        shadowImage.addEventListener("mouseout", removeShadow, false);
+        function addShadow() {
+            shadowImage.setAttribute('id','hovered');
+        }
+        function removeShadow() {
+            shadowImage.removeAttribute('id','hovered');
+        }
+}
 
