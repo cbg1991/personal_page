@@ -31,7 +31,7 @@ body {
 }
 
 #progressbar {
-    border-bottom: 10px solid white;
+    border-bottom: 10px solid rgb(240, 200, 200);
     width: 0;
     position: fixed;
     top: 0; left: 0;
@@ -83,7 +83,12 @@ body {
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
-
+#cover-pic-zoom {
+    height: 500px;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    box-shadow: 10px 10px 10px 10px rgb(248, 237, 237);;
+}
 
 a {
     color: #E5E7EB;
@@ -208,4 +213,32 @@ a {
     background-color: #1F2937;
     color: #F9FAF8;
     padding: 35px 100px 35px 100px;
+}
+
+.gallery-column {
+    float: left;
+    padding: 10px;
+   
+}
+
+.gallery-column img {
+    display: flex;
+    opacity: 0.8;
+    width: 400px;
+    height: 500px;
+    border: 5px solid #E5E7EB;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
+}
+
+.gallery-row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.big-image {
+    position: relative;
+    width: 100%;
 }

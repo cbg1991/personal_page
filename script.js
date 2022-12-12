@@ -1,4 +1,4 @@
-console.log("test");
+
 /* scroll progress bar */
 let bar = document.querySelector("#progressbar");
   window.addEventListener("scroll", () => {
@@ -20,6 +20,8 @@ for(i = 0; i < shadow.length; i++) {
         }
 }
 
+/* zoom in on cover pic while adding shadow */
+
 let picShadow = document.querySelectorAll(".cover-pic");
 for(i = 0; i < picShadow.length; i++) {
     let shadowImage = picShadow[i];
@@ -27,9 +29,25 @@ for(i = 0; i < picShadow.length; i++) {
         shadowImage.addEventListener("mouseout", removeShadow, false);
         function addShadow() {
             shadowImage.setAttribute('id','hovered');
+            shadowImage.setAttribute('id','cover-pic-zoom');
         }
         function removeShadow() {
             shadowImage.removeAttribute('id','hovered');
+            shadowImage.removeAttribute('id','cover-pic-zoom');
         }
 }
+
+
+let littleImage = document.querySelectorAll(".gallery-pic");
+for(i = 0; i < littleImage.length; i++) {
+    let selectedImage = littleImage[i];
+        selectedImage.addEventListener("click", changeImage, false);
+        function changeImage() {
+            console.log(selectedImage.src);
+            newSource = selectedImage.src;
+            document.querySelector("#expanded-image").src = newSource;
+        }
+}
+
+
 
