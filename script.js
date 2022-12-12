@@ -46,7 +46,6 @@ for(i = 0; i < littleImage.length; i++) {
         selectedImage.addEventListener("mouseover", addOpacity, false);
         selectedImage.addEventListener("mouseout", removeOpacity, false);
         function changeImage() {
-            console.log(selectedImage.src);
             newSource = selectedImage.src;
             document.querySelector("#expanded-image").src = newSource;
         }
@@ -57,6 +56,8 @@ for(i = 0; i < littleImage.length; i++) {
             selectedImage.removeAttribute("id","gallery-hover");
         }
 }
+
+/* dropdown menu triggered by event listeners */
 
 let dropdownButton = document.querySelector(".dropbtn");
 let content = document.querySelector(".dropdown-content");
