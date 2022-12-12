@@ -6,6 +6,4 @@ let bar = document.querySelector("#progressbar");
     bar.style.width = `${(pageYOffset / max) * 100}%`;
   });
 
-  section-2-images.onmouseenter = function(){
-    this.classList.add("section-2-images-hover");
-  }
+
